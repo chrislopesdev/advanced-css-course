@@ -1,6 +1,6 @@
 .section-about {
   background-color: $color-grey-light-1;
-  padding: 25rem 0;
+  padding: 30rem 0;
   margin-top: -10vh;
 
   &__content {
@@ -54,5 +54,51 @@
   }
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
+  }
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+
+  transform: skewY(-5deg);
+  margin-top: -10vh;
+
+  .fix-skew {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  & > * {
+    transform: skewY(5deg);
+  }
+
+  &__box {
+    background-color: rgba($color-white, 0.8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    width: 20%;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
+  }
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    fill: $color-primary;
+  }
+
+  &__text {
   }
 }

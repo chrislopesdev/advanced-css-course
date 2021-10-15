@@ -1,7 +1,7 @@
 body {
   font-family: "Lato", sans-serif; /* font fam should be in body */
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: $default-font-size;
   line-height: 1.7;
   color: $color-grey-dark;
   padding: 3rem;
@@ -33,5 +33,34 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  display: inline-block;
+  // background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; // allows background color to come through
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }

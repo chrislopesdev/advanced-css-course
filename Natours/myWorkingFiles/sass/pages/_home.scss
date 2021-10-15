@@ -1,0 +1,58 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -10vh;
+
+  &__content {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    padding-right: 4rem;
+    width: 50%;
+  }
+
+  &__photos {
+    width: 50%;
+  }
+}
+
+// photo composition
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    // border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+
+    &--1 {
+      left: 0;
+      top: -2rem;
+    }
+    &--2 {
+      right: 0;
+      top: 2rem;
+    }
+    &--3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-0.5rem);
+      outline: 1.5rem solid $color-primary;
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
